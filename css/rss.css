@@ -1,0 +1,18 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.news-container {
+    border: 1px grey solid;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.news-timeStamp {
+    background-color: black;
+    color: white;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
