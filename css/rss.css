@@ -11,6 +11,34 @@ body {
 .news-timeStamp {
     background-color: black;
     color: white;
+    padding: .25rem;
+}
+
+.invisible .newsText {
+    display: none;
+    /*transition: display 1s;*/
+}
+
+/*.invisible .news-link {
+    display: none;
+}*/
+
+.news-link {
+    text-align: right;
+}
+
+.news-link a {
+    color: navy;
+    text-decoration: none;
+}
+
+img {
+    max-width: 20vw;
+    display: block;
+}
+
+h1 {
+    text-align: center;
 }
 
 h2 {
