@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -15,12 +15,14 @@ body {
     .news-container {
         display: inline-block;
         width: 200px;
+        min-height: 366px;
     }
 }
 
 @media (min-width: 960px) {
     .news-container {
         width: 300px;
+        height: 400px;
     }
 }
 
@@ -32,16 +34,8 @@ body {
     background-color: black;
     color: white;
     padding: .25rem;
-}
-
-.invisible .newsText {
-    display: none;
-    /*transition: display 1s;*/
-}
-
-/*.invisible .news-link {
-    display: none;
-}*/
+    max-width: 20vw
+}   
 
 .news-link {
     text-align: right;
@@ -63,4 +57,30 @@ h1 {
 
 h2 {
     font-family: 'Times New Roman', Times, serif;
+}
+
+.card {
+   /* width: 18rem;*/
+
+.card-deck {
+    border: 1px solid blue;
+    background-color: yellow;
+    margin: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 50%;
+}
+
+.card {
+    border: 1px solid red;
+    margin: 1rem;
+    max-width: 20vw;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 50%;
+
+}
+
+.card-title {
+    font-weight: bold;
 }
