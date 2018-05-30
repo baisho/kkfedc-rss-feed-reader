@@ -1,86 +1,96 @@
-/*body {
+body {
     font-family: Helvetica, Arial, sans-serif;
+    background-color: #DFDFDF;
+    margin: 0;
 }
 
-.news-container {
-    border: 1px grey solid;
-    margin: 1rem;
-    padding: 1rem;
-    -webkit-border-radius: 4px;
-    -moz-border-radius:4px;
-    border-radius: 4px;
+.container {
+    margin-bottom: 2.5rem;
 }
-
-@media (min-width: 600px) {
-    .news-container {
-        display: inline-block;
-        width: 200px;
-        min-height: 366px;
-    }
-}
-
-@media (min-width: 960px) {
-    .news-container {
-        width: 300px;
-        height: 400px;
-    }
-}
-
-.news-container:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.375)
-}
-
-.news-timeStamp {
-    background-color: black;
-    color: white;
-    padding: .25rem;
-    max-width: 20vw
-}   
-
-.news-link {
-    text-align: right;
-}
-
-.news-link a {
-    color: navy;
-    text-decoration: none;
-}
-
-img {
-    max-width: 20vw;
-    display: block;
-}
-
+   
 h1 {
     text-align: center;
 }
 
-h2 {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.card {
-   /* width: 18rem;*/
-
 .card-deck {
-    border: 1px solid blue;
-    background-color: yellow;
-    margin: 1rem;
     display: flex;
     flex-flow: row wrap;
-    flex: 1 1 50%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .card {
-    border: 1px solid red;
-    margin: 1rem;
+    border-radius: 4px;
+    background-color: #FFFFF0;
+    margin: .5rem;
+    min-width: 250px;
     max-width: 20vw;
-    display: flex;
-    flex-flow: row wrap;
-    flex: 1 1 50%;
+    flex: 1 1 auto;
+    transition: all 250ms ease-in;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.375);
+}
 
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 25px 25px 40px rgba(0, 0, 0, .5);
+    transition: all 500ms ease-out;
+}
+
+.card-img-top {
+    max-width:100%;
+    box-sizing: border-box;
+    padding: 0.25rem;
+}
+
+ .news-timeStamp {
+    background-color: black;
+    font-size: 12px;
+    color: white;
+    padding: .1rem 1rem;
+    max-width: 100%;
 }
 
 .card-title {
     font-weight: bold;
+    padding: .95rem .5rem 0 .75rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-text{
+    padding: 0 .75rem;
+    height: 25vh;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #008CBA;
+    display: block;
+    box-sizing: border-box;
+    max-width: 10rem;
+    height: 2rem;
+    margin: 0.75rem auto;
+    padding: .5rem 0;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .15);
+}
+
+@media (min-width: 600px) {
+    .card-deck {
+        margin: 0;
+    }
+}
+
+@media (max-height: 600px) {
+    .card-text{
+        height: 28vh;
+    }
+}
+
+@media (min-height: 800px) {
+    .card-text{
+        height: 20vh;
+    }
 }
