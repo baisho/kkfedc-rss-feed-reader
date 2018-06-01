@@ -1,16 +1,11 @@
 $(document).ready(function () {
   getNews();
-
-  $(document).on("click", ".news-container", function (myEvent) {
-  });
 });
 
 function getNews() {
   var url = "https://query.yahooapis.com/v1/public/yql?q=select%20title%2Cdescription%2Clink%2CpubDate%2Cenclosure%20from%20rss%20where%20url%20%3D%20'https%3A%2F%2Fwww.motorsport.com%2Frss%2Ff1%2Fnews%2F'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=?";
 
   $.getJSON(url, function (news) {
-    var news_counter = 0;
-    var number_of_columns = 3;
 
     $.each(news.query.results.item, function (index, oneNews) {
       var picture;
@@ -28,7 +23,7 @@ function getNews() {
       $("<div>").text(date).addClass("news-timeStamp").appendTo(card);
       var card_crop = $("<div>").addClass("card-body").appendTo(card);
       var myString = oneNews.description;
-      var myText = myString.substring(0, myString.indexOf(" ", 245)) + '...';
+      var myText = myString.substring(0, myString.indexOf(" ", 245)) + "...";
       $("<div>").text(oneNews.title).appendTo(card_crop).addClass("card-title");
       $("<p>").text(myText).appendTo(card_crop).addClass("card-text");
       $("<a target='_blank'>").text("Read whole article").addClass("btn btn-primary").attr("href", oneNews.link).appendTo(card_crop);
